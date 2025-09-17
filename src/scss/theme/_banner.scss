@@ -2,41 +2,64 @@
 
 // override default banner styles here.
 
-@media only screen and (min-width: 1200px) {
-  .su-hero {
-    min-height: 250px;
-  }
-}
+// Stanford Title banner
+.ptype-stanford-page-title-banner {
 
-@media only screen and (min-width: 1200px) {
+  .su-card {
+    &.su-hero__card {
+      background-color: transparent;
+      border: none;
+      box-shadow: none;
+      color: $su-color-black;
+      bottom: 0;
+
+      @include grid-media-min('sm') {
+        color: $su-color-white;
+      }
+
+      @include grid-media-min('md') {
+        margin-bottom: 0;
+        margin-top: 96px;
+        max-width: 450px;
+        top: auto;
+      }
+    }
+  }
+
+  @include grid-media-min('lg') {
+    .su-hero {
+      min-height: 250px;
+    }
+
+  .su-hero__media {
+        min-height: 250px;
+        position: absolute;
+      }
+  .su-hero__media {
+        min-height: 250px;
+        position: absolute;
+      }
+  }
+
+  @include grid-media-min('md') {
     .su-hero__media {
       min-height: 250px;
       position: absolute;
     }
-}
 
-@media only screen and (min-width: 992px) {
-  .su-hero__media {
-    min-height: 250px;
-    position: absolute;
+    .su-hero {
+      min-height: 250px;
+    }
   }
-}
 
-@media only screen and (min-width: 992px) {
-  .su-hero {
-    min-height: 250px;
-  }
-}
+  @include grid-media-min('sm') {
+    .su-hero__media {
+      min-height: 150px;
+      position: absolute;
+    }
 
-@media only screen and (min-width: 768px) {
-  .su-hero__media {
-    min-height: 150px;
-    position: absolute;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .su-hero {
-    min-height: 150px;
+    .su-hero {
+      min-height: 150px;
+    }
   }
 }

@@ -13,54 +13,34 @@ a {
   &.su-button--big {
     background-color: $gardner-color-yellow;
     border-radius: 4px;
-    color: $su-color-white;
-  }
-
-  &.su-button--secondary {
-    border: 1px solid $gardner-color-secondary-btn;
-    box-shadow: none;
-    color: $gardner-color-secondary-btn;
-    border-radius: 4px;
-
-    &:hover,
-    &:active {
-      background-color: $gardner-color-brown;
-      color: $su-color-white;
-      transition: background-color 0.5s;
-      box-shadow: none;
-    }
+    color: $su-color-black;
 
     &.su-link--external {
+      &:hover,
+      &:focus {
+        &::after {
+          background-color: $su-color-white;
+        }
+      }
       &::after {
-        background-color: $gardner-color-secondary-btn;
+        background-color: $su-color-black;
+      }
+    }
+
+    &.mailto {
+      svg {
+        fill: $su-color-black;
       }
 
       &:hover,
-      &:active {
-        &::after {
-         background-color: $su-color-white;
-        }
-      }
-    }
-  }
-
-  &.su-button--secondary {
-    &.mailto {
-      svg {
-        fill: $gardner-color-secondary-btn;
-
-        &:hover,
-        &:active {
+      &:focus {
+        svg {
           fill: $su-color-white;
         }
       }
     }
-
-    &:hover,
-    &:active {
-      svg {
-        fill: $su-color-white;
-      }
-    }
+  }
+  &.su-button--secondary {
+    border-radius: 4px;
   }
 }
