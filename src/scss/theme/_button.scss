@@ -8,39 +8,92 @@
 //  }
 //}
 
-a {
-  &.su-button,
-  &.su-button--big {
-    background-color: $gardner-color-yellow;
-    border-radius: 4px;
-    color: $su-color-black;
+.su-wysiwyg-text{
+  a {
+    &.su-button {
+      background-color: $gardner-color-yellow;
+      border-radius: 4px;
+      color: $su-color-black;
 
-    &.su-link--external {
       &:hover,
       &:focus {
+        background-color: $su-color-black;
+        color: $su-color-white;
+
         &::after {
           background-color: $su-color-white;
         }
       }
-      &::after {
-        background-color: $su-color-black;
-      }
-    }
 
-    &.mailto {
-      svg {
-        fill: $su-color-black;
+      &.su-link--external {
+        &:hover,
+        &:focus {
+          &::after {
+            background-color: $su-color-white;
+          }
+        }
+        &::after {
+          background-color: $su-color-black;
+        }
       }
 
-      &:hover,
-      &:focus {
+      &.mailto {
         svg {
-          fill: $su-color-white;
+          fill: $su-color-black;
+        }
+
+        &:hover,
+        &:focus {
+          svg {
+            fill: $su-color-white;
+          }
         }
       }
     }
-  }
-  &.su-button--secondary {
-    border-radius: 4px;
+
+    &.su-button--secondary {
+      box-shadow: inset 0 0 0 2px $gardner-color-yellow;
+      color: $su-color-black;
+
+      &:hover,
+      &:focus {
+        box-shadow: inset 0 0 0 2px $su-color-black;
+        color: $su-color-black;
+
+        &::after {
+          background-color: $su-color-black;
+        }
+      }
+
+      &.su-link--external {
+        &:hover,
+        &:focus {
+          &::after {
+            background-color: $su-color-black;
+          }
+        }
+        &::after {
+          background-color: $su-color-black;
+        }
+      }
+
+      &.mailto {
+        svg {
+          fill: $su-color-black;
+        }
+
+        &:hover,
+        &:focus {
+          svg {
+            fill: $su-color-black;
+          }
+        }
+      }
+    }
+
+    &.su-button--secondary,
+    &.su-button--big {
+      border-radius: 4px;
+    }
   }
 }
