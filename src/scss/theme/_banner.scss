@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+// override default banner styles here.
+
+@media only screen and (min-width: 1200px) {
+  .su-hero {
+    min-height: 250px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+    .su-hero__media {
+      min-height: 250px;
+      position: absolute;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+  .su-hero__media {
+    min-height: 250px;
+    position: absolute;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .su-hero {
+    min-height: 250px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .su-hero__media {
+    min-height: 150px;
+    position: absolute;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .su-hero {
+    min-height: 150px;
+  }
+}
